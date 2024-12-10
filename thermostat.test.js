@@ -6,7 +6,7 @@ describe('Thermostat', () => {
         expect(thermostat.getTemperature()).toBe(20)
     })
     
-    it('temp up bu 1 degree with up method and vice versa for down.', () => {
+    it('temp up by 1 degree with up method and vice versa for down.', () => {
         const thermostat = new Thermostat()
         expect(thermostat.getTemperature()).toBe(20)
         
@@ -34,19 +34,23 @@ describe('Thermostat', () => {
         thermostat.up()
         // Power saving mode turned off so can now go beyond previous max of 25.
         expect(thermostat.getTemperature()).toBe(26)
-        
-        it('checks reset method sets temp back to 20 degrees', () => {
-            const thermostat = new Thermostat()
-            thermostat.up()
-            thermostat.up()
-            thermostat.reset()
-            expect(thermostat.getTemperature()).toBe(20)
-        })
+    })
+    
+    it('checks reset method sets temp back to 20 degrees', () => {
+        const thermostat = new Thermostat()
+        thermostat.up()
+        thermostat.up()
+        thermostat.reset()
+        expect(thermostat.getTemperature()).toBe(20)
     })
 })         
-            
+    
 
         
+        
+
+
+
         
 
 
